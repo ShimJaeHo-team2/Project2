@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト in Kobe - main</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/kobetop.css">
+</head>
+<body>
+    <!-- ログインしたメールアドレスを表示する要素を追加 -->
+    <div id="email-display"></div> 
+
+    <!-- テキストを適切にスタイリングするために追加されたクラス "title-text" -->
+    <h2 class="title-text">「私だけのカフェリスト」</h2><br>
+
+    <p class="info-text">
+        この神戸カフェリストのホームページは現在稼働中です。<br>
+        実際にカフェリストを作成できるので、会員登録をして、<br>
+        そのアカウントでログインし、カフェリストを作成してみてください！
+    </p>
+    
+    
+    <!-- ハンバーガーボタン (サイドメニューを開く) -->
+    <button class="menu-btn" id="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <!-- サイドメニュー -->
+    <div id="side-menu" class="side-menu">
+        <!-- サイドメニューを閉じるボタン -->
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <!-- パスワード変更リンク -->
+        <a href="#" id="change-password-link" onclick="changePassword()">change password</a>
+        <!-- ログアウトボタン -->
+        <a href="#" id="logout-link" onclick="logout()">Logout</a>
+        <!-- ログインボタン -->
+        <a href="#" id="login-link" onclick="goToLogin()">Login</a>
+    </div>
+
+    <!-- ページの中央に入るボタン -->
+    <div class="center-container">
+        <button onclick="enter()">いらっしゃいませ</button>
+    </div>
+
+    <!-- ユーザー定義のモーダルポップアップ -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModal()">確認</button> <!-- 修正された部分 -->
+        </div>
+    </div>
+
+
+    <!-- JavaScriptファイルを接続 -->
+    <script src="javascript/kobetop.js"></script>
+</body>
+</html>

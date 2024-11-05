@@ -1,0 +1,205 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('kobe01-0.png'); /* 背景画像の設定 */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントの適用 */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.info-text {
+    color: black; /* 文字色 */
+    background-color: rgba(252, 209, 209, 0.39);
+    font-weight: bold; /* 太字 */
+    font-size: 18px;
+    text-shadow: 
+        -1px -1px 0 #fff, /* 白い外枠 */
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff; 
+    text-align: center; /* 中央揃え */
+    position: absolute; /* 絶対位置 */
+    top: 30%; /* タイトルの下に少し下がった位置 */
+    left: 50%; /* 水平方向の中央揃え */
+    transform: translateX(-50%); /* 水平方向の中央揃えのための変換 */
+    padding: 10px; /* マージン追加 */
+    z-index: 99; /* ポップアップよりも低いz-index値に修正 */
+}
+
+/* 既存のスタイルの上に新しいスタイルを追加 */
+
+/* タイトルテキストスタイル修正 */
+.title-text {
+    color: rgb(3, 3, 3); /* 銀色の文字 */
+    background-color: rgba(252, 209, 209, 0.39);
+    font-size: 2em; /* 文字サイズ */
+    text-shadow: 
+        -1px -1px 0 #fff, /* 白い外枠 */
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff; 
+    position: absolute;
+    top: 2%; /* 上からの位置調整 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平方向の中央揃え */
+    padding: 10px 20px; /* テキスト周りのマージン */
+    border-radius: 5px; /* 角を丸く */
+    display: inline-block; /* 背景色をテキストの長さに合わせるためにインラインブロック使用 */
+}
+
+/* ユーザーのメール表示スタイル */
+.user-email {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 16px;
+    color: white;
+    z-index: 1000;
+}
+
+/* ログインしたメールを楕円形に表示 */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒色背景 */
+    color: white; /* 文字色 */
+    padding: 10px 20px; /* 内部マージン */
+    border-radius: 20px; /* 楕円形を作るための丸い角 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+    display: none; /* 基本的に隠す */
+}
+
+
+/* ハンバーガーボタンスタイル */
+.menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000; /* サイドメニューより上に位置 */
+}
+
+/* サイドメニューのスタイル */
+.side-menu {
+    height: 100%; /* サイドメニューの高さを全画面に設定 */
+    width: 0; /* 初期状態ではサイドメニューが見えない */
+    position: fixed; /* 固定位置 */
+    top: 0; /* 上から開始 */
+    right: 0; /* 右から表示 */
+    background-color: #111; /* 背景色 */
+    overflow-x: hidden; /* 横スクロールを隠す */
+    transition: 0.5s; /* メニューが表示されるアニメーション時間 */
+    padding-top: 60px; /* 上のパディング */
+    z-index: 999; /* 他の要素より上に表示 */
+}
+
+.side-menu a {
+    padding: 10px 15px; /* メニュー項目のパディング */
+    text-decoration: none; /* リンクの下線を削除 */
+    font-size: 18px; /* フォントサイズ */
+    color: white; /* 文字色 */
+    display: block; /* ブロック要素として表示 */
+    transition: 0.3s; /* メニュー項目にマウスオーバー時のアニメーション時間 */
+}
+
+.side-menu a:hover {
+    background-color: #575757; /* メニュー項目にマウスオーバー時の背景色変更 */
+}
+
+/* サイドメニュー閉じるボタン */
+.close-btn {
+    position: absolute; /* 絶対位置 */
+    top: 0; /* 上部位置 */
+    right: 25px; /* 右位置 */
+    font-size: 36px; /* フォントサイズ */
+    background: none; /* 背景なし */
+    border: none; /* 枠線なし */
+    color: white; /* 文字色 */
+    cursor: pointer; /* マウスカーソル変更 */
+    z-index: 1001; /* ハンバーガーボタンより上に位置 */
+    padding: 5px 10px; /* クリック可能な領域を狭めるためのパディング調整 */
+    transition: background-color 0.3s; /* 背景色の変化アニメーション */
+}
+
+.close-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* hover効果 - 背景色追加 */
+    padding: 5px 10px; /* hover状態でもpaddingを維持してサイズ変更なし */
+}
+
+/* ページ中央に位置するボタンスタイル */
+.center-container {
+    text-align: center;
+    position: absolute; /* 絶対位置指定 */
+    top: 45%; /* 画面中央から下に50% */
+    left: 52%; /* 画面中央から右に50% */
+    transform: translate(-48%, 80%); /* 位置調整 (左右、上下) (カフェのドアに合わせる) */
+}
+
+button {
+    padding: 20px 30px;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントの適用 */
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #c2c457;
+}
+
+/* ポップアップメッセージの文字サイズ調整 */
+#alert-message {
+    font-size: 24px; /* 希望する文字サイズに設定 */
+}
+
+/* モーダルスタイル */
+.modal {
+    display: none; /* 基本的にモーダルを隠す */
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントの適用 */
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #c2c457;
+}

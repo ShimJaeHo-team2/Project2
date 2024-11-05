@@ -1,0 +1,254 @@
+/* 基本スタイル */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('inkobe3-0.webp'); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ログインしたメールアドレスを表示する領域スタイル */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒い背景 */
+    color: white; /* 文字色 */
+    padding: 10px 20px; /* 内部余白 */
+    border-radius: 20px; /* 楕円形を作るための丸い角 */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* ログインボタンスタイル */
+#login-button {
+    position: fixed;
+    top: 60px;
+    right: 10px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+    display: none;
+}
+
+#login-button:hover {
+    background-color: #c2c457;
+}
+
+/* メインボタンスタイル */
+#main-btn {
+    position: fixed;
+    top: 60px; /* ログインメールのすぐ下 */
+    left: 10px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#main-btn:hover {
+    background-color: #c2c457;
+}
+
+/* 全体コンテナスタイル */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 80%;
+}
+
+/* 上部の四角 */
+.top-box {
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明の白色 */
+    padding: 20px;
+    border-radius: 10px;
+    flex: 0.4; 
+    margin-bottom: 20px;
+    font-size: 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    max-height: 30%; /* 最大高さ制限 */
+    box-sizing: border-box; /* パディングとボーダーを含む */
+}
+
+/* 下部の四角 */
+.bottom-box {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 22px !important; /* 文字サイズ調整 */
+    justify-content: center; /* 垂直中央揃え */
+    text-align: center; /* テキスト水平中央揃え */
+    flex: 0.6; /* 下部ボックスのサイズを増加 */
+    max-height: 70%; /* 最大高さ制限 */
+    box-sizing: border-box; /* パディングとボーダーを含む */
+    overflow-y: auto; /* 内容が溢れた場合のスクロール */
+}
+
+/* ユーザー入力を表示する要素スタイル修正 */
+#user-text {
+    color: #333333; /* 濃い灰色 */
+    text-shadow: 
+        -1px -1px 0 #C0C0C0, /* 左上の銀色の境界 */
+         1px -1px 0 #C0C0C0, /* 右上の銀色の境界 */
+        -1px  1px 0 #C0C0C0, /* 左下の銀色の境界 */
+         1px  1px 0 #C0C0C0; /* 右下の銀色の境界 */
+    font-weight: bold; /* 文字を太く表示 */
+}
+
+/* 会話文の文字アニメーション */
+#dialog-text {
+    font-size: 22px;
+    white-space: pre-wrap; /* 改行を含む */
+    overflow: hidden;
+    border-right: 2px solid black;
+}
+
+.user-dialog {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ボタンコンテナスタイル */
+.button-container {
+    display: flex;
+    gap: 10px;
+}
+
+/* 戻るボタンスタイル */
+#back-btn {
+    padding: 15px 30px;
+    background-color: #a6a6a6;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#back-btn:hover {
+    background-color: #8c8c8c;
+}
+
+/* ボタンスタイル */
+button {
+    padding: 15px 30px;
+    background-color: #55451a;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto; /* ボタンが下部に位置するよう設定 */
+}
+
+button:hover {
+    background-color: #c2c457;
+}
+
+/* モーダルスタイル */
+.modal {
+    display: none; /* デフォルトでモーダルを隠す */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景 */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 再録音確認モーダルスタイル */
+#retry-alert .modal-content {
+    display: flex;
+    flex-direction: column; /* テキストとボタンを縦に配置 */
+    align-items: center; /* 中央揃え */
+    justify-content: center; /* 中央揃え */
+    gap: 30px; /* テキストとボタンの間の余白を縮小 */
+    width: 300px; /* モーダルの幅 */
+    margin: 15% auto; /* モーダル位置調整 */
+    padding: 20px; /* モーダルの内部余白 */
+    box-sizing: border-box; /* パディングとボーダーを含むサイズ計算 */
+    max-height: 200px; /* モーダルの最大高さ設定 */
+}
+
+#retry-alert .modal-content p {
+    margin: 0;
+    font-size: 16px; /* テキストサイズ */
+}
+
+#retry-alert .button-container {
+    display: flex;
+    gap: 10px; /* ボタン間の余白 */
+}
+
+#retry-alert button {
+    width: 100px;
+    padding: 10px; /* ボタンの内部余白 */
+    font-size: 14px; /* ボタンテキストサイズ */
+}
+
+/* ヘルプボタンスタイル */
+.help-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: #55451a;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* ヘルプテキストスタイル */
+.help-text {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 370px;
+}
+
+.help-text p {
+    margin: 0;
+}

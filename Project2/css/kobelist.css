@@ -1,0 +1,138 @@
+/* 基本スタイル */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('kobe01-0.png');
+    background-size: cover; /* 全体背景を埋める */
+    background-position: center;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* ボタン位置を絶対的に設定するために追加 */
+}
+
+/* ログイン中のメールアドレスを表示する領域スタイル */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒背景 */
+    color: white; /* 文字色 */
+    padding: 10px 20px; /* 内部余白 */
+    border-radius: 20px; /* 楕円形を作るための丸い角 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* メインへ行くボタンスタイル */
+.main-button {
+    position: absolute;
+    top: 60px;
+    left: 20px; /* 左から20px離れるように設定 */
+    font-size: 19px; 
+    padding: 15px 30px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: #c2c457;
+}
+
+/* ログインボタンスタイル */
+.login-button {
+    font-size: 20px; 
+    position: absolute;
+    top: 60px;
+    right: 19px; 
+    padding: 15px 30px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #c2c457;
+}
+
+/* リストコンテナスタイル */
+.list-container {
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 50px; /* 背景サイズを大きくするためにパディングを50pxに増加 */
+    border-radius: 15px; /* 丸い角を少し強調 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* 影の強度を増加 */
+    text-align: center;
+}
+
+/* 基本ボタンスタイル (既存のリストを読み込むボタンを含む) */
+.list-container button {
+    width: 250px; /* ボタンサイズを拡大 */
+    padding: 15px; /* ボタン内の余白を拡大 */
+    margin: 20px; /* ボタン間隔を拡大 */
+    font-size: 20px; /* 文字サイズを拡大 */
+    background-color: #55451a; /* 既存ボタンの背景色 */
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.list-container button:hover {
+    background-color: #c2c457; /* 既存ボタンのhover効果 */
+}
+
+/* 二番目のボタン(新しいリスト作り)のスタイル変更 */
+.list-container button:nth-child(2) {
+    background-color: #E5A723; 
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+}
+
+.list-container button:nth-child(2):hover {
+    background-color: #4F7A5F; 
+}
+
+/* モーダルスタイル */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #55451a;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #c2c457;
+}

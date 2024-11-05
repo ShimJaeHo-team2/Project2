@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>New list 作り B</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/newlistB.css">
+</head>
+<body>
+    <!-- ログインしたメールアドレスを表示する領域を追加 -->
+    <div id="email-display"></div>
+
+    <!-- メインに戻るボタンを追加 -->
+    <button id="main-btn" class="main-button" onclick="goToMain()">Home</button>
+
+    <!-- ログインボタンを追加 -->
+    <button id="login-button" class="login-button" onclick="goToLogin()">Login</button>
+    
+    <div class="container">
+        <!-- 上部の対話ウィンドウ -->
+        <div class="top-box" id="dialog-box">
+            <p id="dialog-text"></p>
+        </div>
+
+        <!-- 下部の選択ウィンドウ -->
+        <div class="bottom-box" id="selection-box">
+            <form id="selection-form">
+                <!-- 選択肢のボタンが動的に追加される領域 -->
+            </form>
+        </div>
+
+        <div class="button-container">
+            <!-- 戻るボタン -->
+            <button id="back-btn" onclick="goBack()">いやだ</button>
+            <!-- 確認ボタン -->
+            <button id="confirm-btn" onclick="openModal()">はい</button>
+        </div>
+    </div>
+
+    <!-- カスタムポップアップモーダル (確認リクエスト) -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p>本当に選択を完了しますか？</p>
+            <button onclick="confirmSelection()">はい</button>
+        </div>
+    </div>
+
+    <!-- カスタムポップアップモーダル (選択完了) -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <p id="selected-style-text"></p>
+            <button onclick="closeResultModal()">閉じる</button>
+        </div>
+    </div>
+
+    <script src="javascript/newlistB.js"></script>
+</body>
+</html>

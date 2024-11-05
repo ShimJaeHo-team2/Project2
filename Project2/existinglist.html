@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/existinglist.css">
+</head>
+<body>
+    <!-- ログインしたメールアドレスを表示する領域を追加 -->
+    <div id="email-display"></div>
+    
+    <!-- メインに戻るボタンを追加 -->
+    <div class="main-button-container">
+        <button class="main-button" onclick="goToMain()">Home</button>
+    </div>
+
+    <div class="container">
+        
+        <h1>私だけのカフェリスト</h1>
+
+        <!-- リストボタン -->
+        <div class="list-container" id="buttonContainer">
+            <!-- JavaScriptでボタンがここに動的に追加されます。 -->
+        </div>
+
+        <!-- 削除ボタンを一番下に移動しサイズ調整 -->
+        <!-- <div class="delete-container">
+            <button class="delete-button" onclick="confirmDelete()">削除</button>
+        </div> -->
+    </div>
+
+    <!-- カスタムモーダル -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModal()">確認</button>
+        </div>
+    </div>
+
+    <script src="javascript/existinglist.js"></script>
+</body>
+</html>

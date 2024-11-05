@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/kobelist.css">
+</head>
+<body>
+    <!-- ログイン中のメールアドレスを表示する領域を追加 -->
+    <div id="email-display"></div>
+
+    <!-- メインへ行くボタン -->
+    <button class="main-button" onclick="goToMain()">Home</button>
+
+    <!-- ログインボタン -->
+    <button class="login-button" id="login-button" onclick="goToLogin()">Login</button>
+
+    <!-- 中央にボタンがあるコンテナ -->
+    <div class="list-container">
+        <button onclick="loadExistingList()">既存のリストを読み込む</button>
+        <button onclick="createNewList()">新しいリスト作り</button>
+    </div>
+
+    <!-- ユーザー定義モーダル -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message"></p>
+            <button onclick="closeModal()">確認</button>
+        </div>
+    </div>
+
+    <script src="javascript/kobelist.js"></script>
+</body>
+</html>

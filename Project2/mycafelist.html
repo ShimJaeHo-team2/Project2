@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>私だけのカフェリスト</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/mycafelist.css">
+</head>
+<body>
+    <!-- ログインしたメールアドレスを表示するエリア -->
+    <div id="email-display"></div>
+    
+    <!-- メインボタン -->
+    <div class="main-button-container">
+        <button class="main-button" onclick="goToMain()">Home</button>
+    </div>
+
+    <!-- 中央のコンテナ -->
+    <div class="container">
+        <h1>私だけのカフェリスト-検索</h1>
+
+        <!-- データベースから取得した情報が表示されるエリア -->
+        <div id="data-display" class="data-container">
+            <!-- ここにJavaScriptでデータを表示 -->
+        </div>
+
+        <!-- 私のリストに保存するボタン -->
+        <button class="save-button" onclick="saveToList()">私のリストに保存</button>
+    </div>
+
+    <!-- ユーザー指定のモーダルポップアップ -->
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <p id="modal-message">私のリストに保存しました。</p>
+
+            <!-- ポップアップ内に「私だけのリスト一覧」ボタンを追加 -->
+            <button class="list-button" onclick="goToList()">私だけのリスト</button>
+        </div>
+    </div>
+
+    <script src="javascript/mycafelist.js"></script>
+</body>
+</html>

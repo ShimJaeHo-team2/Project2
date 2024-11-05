@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>New list 作り A</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/newlistA.css">
+</head>
+<body>
+    <!-- ログインしたメールアドレスを表示する領域を追加 -->
+    <div id="email-display"></div>
+
+    <!-- メインボタンを追加 -->
+    <button id="main-btn" class="main-button" onclick="goToMain()">Home</button>
+
+    <!-- ログインボタンを追加 -->
+    <button id="login-button" class="login-button" onclick="goToLogin()">Login</button>
+
+    <div class="container">
+        <!-- 上部の四角 -->
+        <div class="top-box" id="dialog-box">
+            <!-- 会話文を表示する要素 (DBから取得した会話文) -->
+            <p id="dialog-text"></p>
+            <!-- ヘルプボタン -->
+            <div class="help-button" onclick="toggleHelp()">?</div>
+            <!-- ヘルプ内容 -->
+            <div id="help-text" class="help-text">
+                <p>▶サービス: コーヒーが美味しい、音楽が良い、デザートが美味しい..</p>
+                <p>▶スタイル: 海辺ビュー、シティビュー、レトロ(昭和)..</p>
+            </div>
+        </div>
+
+        <!-- 下部の四角 -->
+        <div class="bottom-box">
+            <div class="user-dialog">
+                <!-- ユーザー入力を表示する要素 -->
+                <p id="user-text">ここにuserの話が表示されます。</p>
+            </div>
+            <div class="button-container">
+                <!-- 戻るボタン -->
+                <button id="back-btn" onclick="goBack()">いやだ</button>
+                <!-- 録音ボタン -->
+                <button id="record-btn" onclick="toggleRecording()">音声入力</button>
+                <!-- 再録音ボタン (初めは隠す) -->
+                <button id="retry-btn" style="display:none;" onclick="retryRecording()">もう一度答えます。</button>
+                <!-- 次へボタン (初めは隠す) -->
+                <button id="next-btn" style="display:none;" onclick="goToNext()">検索!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ユーザー定義モーダル -->
+    <div id="custom-alert" class="modal">
+        <div class="modal-content">
+            <p id="alert-message"></p>
+            <button onclick="closeModal()">Yes</button>
+        </div>
+    </div>
+
+    <!-- 再録音確認モーダル -->
+    <div id="retry-alert" class="modal">
+        <div class="modal-content">
+            <p id="retry-message">もう一度答えますか？</p>
+            <div class="button-container">
+                <button id="no-btn" onclick="closeRetryModal()">No</button>
+                <button id="yes-btn" onclick="confirmRetry()">Yes</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="javascript/newlistA.js"></script>
+</body>
+</html>

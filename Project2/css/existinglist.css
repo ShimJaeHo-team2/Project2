@@ -1,0 +1,211 @@
+/* 基本スタイル */
+body {
+    margin: 0;
+    padding: 0;
+    background: url('inkobe3-0.webp') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    font-family: Arial, sans-serif;
+}
+
+/* ログインしたメールアドレスを表示する領域スタイル */
+#email-display {
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明の黒い背景 */
+    color: white; /* 文字色 */
+    padding: 10px 20px; /* 内部余白 */
+    border-radius: 20px; /* 楕円形を作るための丸い角 */
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* メインコンテナスタイル */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; /* 空間を上下に分ける */
+    height: 100vh;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* 半透明の黒背景 */
+    padding: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: auto;
+}
+
+/* タイトルスタイル */
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* リストコンテナスタイル */
+.list-container {
+    width: 100%;
+    flex-grow: 1; /* リストコンテナが中央に余白を占めるようにする */
+}
+
+/* リストアイテムスタイル */
+.list-item {
+    position: relative;
+    margin-bottom: 15px;
+    display: flex; /* チェックボックスとボタンを横に配置 */
+    align-items: center;
+}
+
+/* リストボタンスタイル */
+.list-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: white;
+    cursor: pointer;
+    text-align: left;
+    position: relative;
+    margin-left: 10px; /* チェックボックスとボタンの間の間隔 */
+    display: flex;
+    justify-content: space-between; /* テキストとアイコンの間に余白を追加 */
+    align-items: center;
+}
+
+/* 逆三角形の形を追加 */
+.list-button::after {
+    content: '▼';
+    font-size: 14px;
+    color: white;
+    margin-left: 10px;
+}
+
+/* ボタン間の間隔を追加 */
+.list-button + .list-button {
+    margin-top: 10px; /* ボタンの間に10pxの間隔を追加 */
+}
+
+/* カフェ名にのみスタイルを指定 */
+.highlight-cafe-name {
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: #3b3011; /* 希望の色に設定 */
+    font-size: 18px; /* 文字サイズ調整 */
+    font-weight: bold; /* 太字 */
+}
+
+/* 拡張されたリストで文字サイズ調整 */
+.cafe-details {
+    font-size: 20px; /* 全体文字サイズ */
+    line-height: 1.5; /* 行間 */
+}
+
+/* 作成時間スタイル */
+/* .created-time {
+    font-size: 12px;
+    color: #ccc;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+} */
+
+/* 削除ボタンコンテナ */
+/* .delete-container {
+    width: 100%;
+    margin-bottom: 20px;  下のマージン追加 
+} */
+
+/* 削除ボタンスタイルを小さく調整 */
+/* .delete-button {
+    width: 100%;
+    padding: 8px; サイズを小さくする
+    font-size: 16px; フォントサイズを小さくする
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+} */
+
+/* モーダルスタイル */
+.modal {
+    display: none; /* 基本的にモーダルを隠す */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明背景 */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #55451a;
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background-color: #c2c457;
+}
+
+/* 確認とキャンセルボタンを横に配置 */
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    margin: 0 5px; /* ボタンの間に間隔を追加 */
+}
+
+/* メインボタンスタイル */
+.main-button-container {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    z-index: 1000; /* ボタンが常に上に表示されるように設定 */
+}
+
+.main-button {
+    padding: 10px 20px;
+    background-color: #55451a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-button:hover {
+    background-color: #c2c457;
+}
+
+/* カフェ詳細情報スタイル */
+.cafe-details {
+    background-color: rgba(255, 255, 255, 0.9);
+    font-family: 'Noto Sans JP', sans-serif; /* 日本語フォントを適用 */
+    color: #333;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    font-size: 14px;
+}
