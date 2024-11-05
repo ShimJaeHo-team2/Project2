@@ -8,16 +8,16 @@
 2024年8月9日 ~ 2024年10月9日
 
 ## 活用ツール
-■ フロントエンド  →  HTML  /  CSS  /  JavaScript
-■ 外部API  →  Google(SpeechToText)  /  OpenAI / ChatGPT
-■ バックエンドフレームワーク  →  FastAPI  / Python 3.10.11
-■ サーバー  →  Ubuntu 22.04
-■ データベース  →  mySQL 8.0.39
-■ APIプラットフォーム(テスト用)  →  Postman
+■ フロントエンド  →  HTML  /  CSS  /  JavaScript <br>
+■ 外部API  →  Google(SpeechToText)  /  OpenAI / ChatGPT <br>
+■ バックエンドフレームワーク  →  FastAPI  / Python 3.10.11 <br>
+■ サーバー  →  Ubuntu 22.04 <br>
+■ データベース  →  mySQL 8.0.39 <br>
+■ APIプラットフォーム(テスト用)  →  Postman <br>
 ■ 統合開発環境(IDE)  →  Visual Studio Code
 
 ## 主要機能
-■ ログイン及び会員登録
-■ 音声録音およびボタン入力
-■ イメージ生成(生成AI活用)
+■ ログイン及び会員登録 <br>
+■ 音声録音およびボタン入力 <br>
+■ イメージ生成(生成AI活用) <br>
 ■ カフェリスト提供
